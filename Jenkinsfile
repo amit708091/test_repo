@@ -8,10 +8,6 @@ node {
       sh "${scannerHome}/bin/sonar-scanner"
     }
   }
-   stage('Clone code') {
-                git 'https://github.com/amit708091/test_repo.git'
-            }
-        
 
         stage('Deploy to staging server') {
                 script {
