@@ -9,9 +9,9 @@ node {
     }
   }
    stage('Connect to ubuntu server') {
-     steps{
-       script{
-     def remote = [:]
+     steps {
+       script {
+           def remote = [:]
                     remote.name = 'ubuntu_server'
                     remote.host = '192.0.0.252'
                     remote.user = 'amit'
@@ -19,11 +19,11 @@ node {
                     remote.allowAnyHosts = true
      
      
-     def sshCommand = "ssh -i ${remote.identityFile} ${remote.user}@${remote.host} 'command-to-be-executed'"
-            def sshResponse = sh(script: sshCommand, returnStdout: true).trim()
-            echo "SSH connection response: ${sshResponse}"
+//      def sshCommand = "ssh -i ${remote.identityFile} ${remote.user}@${remote.host} 'command-to-be-executed'"
+//             def sshResponse = sh(script: sshCommand, returnStdout: true).trim()
+//             echo "SSH connection response: ${sshResponse}"
     
-            echo "SSH connection successful. Response: ${remote}"
+//             echo "SSH connection successful. Response: ${remote}"
        }
      }
  
