@@ -16,9 +16,9 @@ node {
           ssh-keyscan -t rsa,dsa 192.0.0.252 >> ~/.ssh/id_rsa.pub
           ssh amit@192.0.0.252 ...
       '''
-    }
-            
         }
+            
+     }
      
   }
  
