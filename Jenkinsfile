@@ -9,6 +9,6 @@ node {
     }
   }
    stage('Deploy on ubuntu server'){
-      ssh amit@192.0.0.252 "echo "hii""
+       sh 'ssh amit@192.0.0.252 "echo "hii""'
   }
 }
