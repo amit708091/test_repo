@@ -8,10 +8,9 @@ node {
       sh "${scannerHome}/bin/sonar-scanner"
     }
   }
-    stages {
-        stage('Connect to Staging server') {
-            steps {
-                script {
+   stage('Connect to Staging server') {
+      steps {
+            script {
                     def remote = [:]
                     remote.name = 'Ubuntu server'
                     remote.host = '192.0.0.252'
@@ -27,4 +26,4 @@ node {
             }
         }
     }
-}
+
