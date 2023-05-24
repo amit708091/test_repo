@@ -17,6 +17,7 @@ node {
                     remote.allowAnyHosts = true
                      
                     sh ' pwd '
+                    sh ' ifconfig '
                     
     }
  }
