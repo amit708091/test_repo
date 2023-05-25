@@ -14,7 +14,7 @@ node {
       sh '''
           [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0777 ~/.ssh
           ssh-keyscan -t rsa,dsa 3.111.157.115 >> ~/.ssh/
-          ssh ubuntu@3.111.157.115 ...
+          ssh -i ubuntu@3.111.157.115 ...
       '''
         }
             
