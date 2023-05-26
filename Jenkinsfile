@@ -12,7 +12,7 @@ node {
   stage('Deploy on staging server') {
     
     script {
-                    sshCommand remote: [
+                    ssh remote: [
                         allowAnyHosts: true,
                         host: '192.0.0.252',
                         port: 22,
