@@ -14,7 +14,7 @@ node {
     script {
                     ssh remote: [
                         allowAnyHosts: true,
-                        host: '192.0.0.252',
+                        host: '192.0.0.249',
                         port: 22,
                         user: 'amit',
                         password: 'welcome'
