@@ -10,11 +10,12 @@ node {
   }
 
         stage('Deploy on staging server') {
-             sshagent(credentials: ['ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC0GegvenePEmCQFsnbGGocnfwOSCRxZY2eLa1qfnD3XR0fancaRvj/Vl4PGsKIqFnXWrJakV15Ykz0uYcc4Rksix4JYQuNJUEMLc6nLZ5rNdt3mcUbsKJDEozo2Bv34RpMQ73I0EkSk5bh8UiUHy98lYomIPhWprqv5kPj8MJ8Zr0eCRH2z3CwimGsVS89Yb6tLqdTpAtmVPJYywvyN0rXUDzEKR4NWLPDozWS0mCFJe5n4B9i4tpt7kokz/SbPGML2aMJzTNcL8ji5WmKz5Juj6E0AL2/VzWz/rlRSt29hzDQhDrLtml7ZRFKAUv/szQfq4Ff+yy9PhwalYcrKBV web_server']) {
+             sshagent(credentials: ['ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8NR3uk7EVRftsDFOOc6Q9x7GiN381iCx4lc0TMIiFx6prRF0j+RojSQL1GStAaoGspBfcYES6yRYziYHxmKMFnyz28k6RX2G/3w9qr54ZdeNw2dBsdwWEcZ5ysKVCNiIl6PeFWa/8cqbBokaZzVSXnGL4UcCwglyK74BBpeeRQslA7ifz2hMlAP1/5jydHwfAlfX4B+n8F7laFWiALberenTWv4EQhAP0FjC3LGKAGT1aB6f0UrE1WoO2TShuU+Sw5p4fd5yRHMz/4TctwW91SmaJIJX7PIFjt5M+oD/C7cAAjh6j19CpJWKKfh9BmCucu2IFWVvCdPYPD/DHaoGJ0BddVXqLRIC+LKOAHLtl8DYL4tpGKjbiE0q6QvzBBbNEp9A6djI8NLuffXuFNYawOJ8mi8+BK03BJ7TEVYE9ro3chDcIKCUmpdw1lSYfXA+UUCcgVJSUq2q5KZb1Y0J7zcDK/KnuPkzwXgIfu65V56l9JKg/MG53IQhRRyt/Cxk= root@stpl
+']) {
       sh '''
           [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0777 ~/.ssh
-          ssh-keyscan -t rsa,dsa 3.111.157.115 >> ~/.ssh/
-          ssh -i ubuntu@3.111.157.115 ...
+          ssh-keyscan -t rsa,dsa 192.0.0.249 >> ~/.ssh/id_rsa
+          ssh amit@192.0.0.249 ...
       '''
         }
             
