@@ -13,7 +13,7 @@ node {
              sshagent(credentials: ['ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8NR3uk7EVRftsDFOOc6Q9x7GiN381iCx4lc0TMIiFx6prRF0j+RojSQL1GStAaoGspBfcYES6yRYziYHxmKMFnyz28k6RX2G/3w9qr54ZdeNw2dBsdwWEcZ5ysKVCNiIl6PeFWa/8cqbBokaZzVSXnGL4UcCwglyK74BBpeeRQslA7ifz2hMlAP1/5jydHwfAlfX4B+n8F7laFWiALberenTWv4EQhAP0FjC3LGKAGT1aB6f0UrE1WoO2TShuU+Sw5p4fd5yRHMz/4TctwW91SmaJIJX7PIFjt5M+oD/C7cAAjh6j19CpJWKKfh9BmCucu2IFWVvCdPYPD/DHaoGJ0BddVXqLRIC+LKOAHLtl8DYL4tpGKjbiE0q6QvzBBbNEp9A6djI8NLuffXuFNYawOJ8mi8+BK03BJ7TEVYE9ro3chDcIKCUmpdw1lSYfXA+UUCcgVJSUq2q5KZb1Y0J7zcDK/KnuPkzwXgIfu65V56l9JKg/MG53IQhRRyt/Cxk= root@stpl']) {
       sh '''
           [ -d ~/.ssh ] || mkdir ~/.ssh && chmod 0777 ~/secret.key
-          ssh-keyscan -t rsa,dsa 192.0.0.249 >> ~/var/lib/jenkins/secret.key
+          ssh-keyscan -t rsa,dsa 192.0.0.249 >> ~/secret.key
           ssh amit@192.0.0.249 ...
       '''
         }
